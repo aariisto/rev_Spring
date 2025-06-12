@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Catalogue</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/catalogue.css}" />
+</head>
+<body>
+    
+    <h1><span th:text="*{menu}" name="titre"></span></h1>
+    <hr>
+    <article>
+        <div th:if="${menu == 'selection'}">
+        <ul>
+            <li><a>catalogue</a> : instance de la classe Catalogue.</li>
+            <li><a>titre, auteur, categorie</a> : Attributs de catalogue.</li>
+        </ul>
+        <div>
+            <span id="catalogue" class="texte" th:text="*{catalogue}" name="catalogue"></span>
+            <div class="contenu">
+                <label>Titre :</label>
+        <span th:if="${catalogue != null}">
+                <span class="attributtexte" th:text="*{catalogue.getTitre()}" name="titre"></span>
+            </div>
+        </span>
+            <div class="contenu">
+               
+                <label>Auteur :</label> <span th:if="${catalogue != null}">
+                <span class="attributtexte" th:text="*{catalogue.auteur}" name="auteur"></span>
+            </div></span>
+            <div class="contenu">
+                
+                <label>Categorie :</label><span th:if="${catalogue != null}">
+                <span class="attributtexte" th:text="*{catalogue.categorie}" name="categorie"></span>
+            </div></span>
+        </div>
+    </div>
+
+    <div th:if="${menu == 'catalogue'}">
+        <h1>Thymeleaf : Exemple 3 (requete GET)</h1>
+<form th:action="@{/ajouter}" th:object="${catalogue}" method="GET">
+    <span>Titre :</span>
+    <input class="titre" type="text" 
+           th:value="${titre}" 
+           placeholder="Entrez le texte" name="titre" />
+    
+    <span>Auteur :</span>
+    <input class="auteur" type="text" 
+           th:value="${auteur}" 
+           placeholder="Qui est l’auteur ?" name="auteur" />
+    
+    <span>Categorie :</span>
+    <input class="categorie" type="text" 
+           th:value="${categorie}" 
+           placeholder="Quelle categorie ?" name="categorie" />
+    
+    <input type="submit" value="Ajouter" />
+    </form>
+
+        <h1>Thymeleaf : Exemple 2</h1>
+        <hr>
+        <table class="collapse">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Categorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="catalogue : ${liste}">
+                    <td th:text="*{catalogue.getTitre()}" name="id_titre"></td>
+                    <td th:text="*{catalogue.getAuteur()}" name="id_auteur"></td>
+                    <td th:text="*{catalogue.getCategorie()}" name="id_categorie"></td>
+                </tr>
+            </tbody>
+        </table>
+        </body>
+
+    </div>
+
+    </article>
+</html>

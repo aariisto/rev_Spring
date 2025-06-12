@@ -1,0 +1,124 @@
+/* catalogue.css */
+
+/* Style général pour le body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Style pour le titre principal */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ligne horizontale */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* Style pour l'article */
+article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste non ordonnée */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+ul li a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur principal */
+div {
+    margin-top: 20px;
+}
+
+/* Style pour les labels */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Style pour les spans */
+span.texte {
+    font-size: 18px;
+    color: #555;
+}
+
+span.attributtexte {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+/* Style pour les sections de contenu */
+div.contenu {
+    margin-bottom: 15px;
+}
+
+/* Style général pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Style pour les en-têtes du tableau */
+table thead th {
+    background-color: #009879;
+    color: #ffffff;
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+/* Style pour les lignes du tableau */
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Style pour les cellules */
+table tbody td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+/* Style pour les lignes alternées */
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Style pour le survol des lignes */
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style pour les bordures */
+table, th, td {
+    border: 1px solid #dddddd;
+}
